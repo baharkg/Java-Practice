@@ -13,7 +13,6 @@ import java.util.*;
 public class Main {
 
   public static void main(String[] args) {
-    System.out.println("Hello world!");
 
     Graph g1 = new Graph(5); 
     g1.addEdge(1, 0); 
@@ -22,14 +21,19 @@ public class Main {
     g1.addEdge(0, 3); 
     g1.addEdge(3, 4); 
     
-    ArrayList<Integer> a = new ArrayList<Integer>();
-    a =g1.BFS(2);
+    ArrayList<Integer> get_distance = new ArrayList<Integer>();
+    get_distance =g1.BFS(2);
     
-    for (int i:a){
-        System.out.println(i);
+    int max_distance = -1;
+    int max_index = -1;
+    for (int i =0; i<get_distance.size(); i++){
+        if (get_distance.get(i) > max_distance){
+          max_index = i;
+          max_distance = get_distance.get(i);
+        }
     }
     
-
+    System.out.println(max_index);
   }
 
   

@@ -28,7 +28,7 @@ public class Main {
     for (int i:a){
         System.out.println(i);
     }
-
+    
 
   }
 
@@ -41,7 +41,9 @@ public class Main {
       // Constructor 
       Graph(int v) { 
           V = v; 
-          adj  = new ArrayList<ArrayList<Integer> >(V); 
+          adj  = new ArrayList<ArrayList<Integer>>(V); 
+          for (int i = 0; i < V; i++) 
+            adj.add(new ArrayList<Integer>());
           
       } 
     
@@ -61,9 +63,9 @@ public class Main {
 
         for(int i=0; i<V; i++) {
           //white = -1, gray =0, black =1
-          color.set(i,-1);
-          distance.set(i,-1); // -1 stands for infonity
-          parent.set(i,-1); // -1 stands for NIL
+          color.add(-1);
+          distance.add(-1);; // -1 stands for infonity
+          parent.add(-1);; // -1 stands for NIL
         }
 
         color.set(s,0);
@@ -86,6 +88,7 @@ public class Main {
 
           }
           color.set(u,1);
+          
         }
               
         return distance;

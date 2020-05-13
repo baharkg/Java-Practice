@@ -73,7 +73,7 @@ public class Main {
         parent.set(s,-1);
 
         Q.add(s);
-        while (Q.isEmpty()){
+        while (!Q.isEmpty()){
           u = Q.remove();
 
           for (int v : adj.get(u)){
@@ -88,6 +88,7 @@ public class Main {
 
           }
           color.set(u,1);
+
           
         }
               

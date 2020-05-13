@@ -74,7 +74,7 @@ public class Main {
         while (Q.isEmpty()){
           u = Q.remove();
 
-          for (int v : adj[u]){
+          for (int v : adj.get(u)){
             if (color.get(v) == -1){
               color.set(v, 0);
               distance.set(v,distance.get(u)+1);

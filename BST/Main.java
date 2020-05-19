@@ -32,7 +32,14 @@ public class Main {
 
     // print inorder traversal of the BST 
     tree.inorder(); 
-  
+    Node b = 
+    if (b.rightThread = true){
+      if (b.right.left == b) {
+        return b.right.
+      } else{
+        return b.right.left
+      }
+    }
   }
 
   

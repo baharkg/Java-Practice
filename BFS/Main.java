@@ -14,12 +14,13 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Graph g1 = new Graph(5); 
+    /*Graph g1 = new Graph(5); 
     g1.addEdge(1, 0); 
     g1.addEdge(0, 2); 
     g1.addEdge(2, 1); 
     g1.addEdge(0, 3); 
-    g1.addEdge(3, 4); 
+    g1.addEdge(3, 4); */
+    Graph g1 = scan_graph();
     
     ArrayList<Integer> get_distance = new ArrayList<Integer>();
     get_distance =g1.BFS(2);
@@ -34,6 +35,26 @@ public class Main {
     }
     
     System.out.println(max_index);
+  }
+
+  public static Graph scan_graph() {
+    Scanner input = new Scanner(System.in);
+    int num_v = input.nextInt();
+    Graph g1 = new Graph(num_v); 
+
+
+    int num_yal = input.nextInt();
+    int yal_h, yal_t;
+    for (int i = 0; i<num_yal;i++){
+        yal_h = input.nextInt();
+        yal_t = input.nextInt();
+        
+        g1.addEdge(yal_h, yal_t); 
+    }
+    input.close();
+
+    return g1;
+
   }
 
   

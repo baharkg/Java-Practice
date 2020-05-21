@@ -1,13 +1,3 @@
-/******************************************************************************
-
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
-
-// Queue implementation of Java.
-
 import java.util.*;
 
 public class Main {
@@ -119,11 +109,6 @@ public class Main {
               
         return distance;
       }
-  
-  
-  
-// This code is contributed by Aakash Hasija
-
 }
 
   public static class MyQueue<T> {
